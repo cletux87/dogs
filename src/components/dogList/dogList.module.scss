@@ -1,0 +1,38 @@
+$gap-size: 16px;
+$thumb-size: 160px;
+$primary-color: #0000bb;
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($thumb-size, 1fr));
+  gap: $gap-size;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.item {
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  position: relative;
+
+  &.active {
+    border-color: $primary-color;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(-5px) scale(1.05);
+    z-index: 10;
+    outline: none;
+  }
+  &:focus {
+    border-color: $primary-color;
+  }
+}

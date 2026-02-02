@@ -1,0 +1,38 @@
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: var(--cursor, pointer);
+
+  &:focus-visible {
+    outline: 3px solid #0056b3;
+    outline-offset: 2px;
+  }
+}
+
+.fullImage {
+  width: 100%;
+  object-fit: cover;
+  height: var(--imageHeight, 100%);
+  aspect-ratio: var(--aspectRatio, 1 / 1);
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 0 0 0;
+  pointer-events: none;
+}
+
+.title {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: var(--fontSize, 0.7rem);
+  font-weight: 600;
+  text-transform: capitalize;
+  background: black;
+}
